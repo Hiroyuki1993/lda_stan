@@ -7,7 +7,7 @@ data = list(
   M = M,
   V = V,
   N = N,
-  W = corpus.tidy$word,
+  W = corpus.lda$new_ind,
   Offset = offset,
   Alpha = rep(1, K),
   Beta = rep(0.5, V)
@@ -28,5 +28,7 @@ fit.vb = vb(
   data = data,
   output_samples = 2000,
   adapt_engaged = FALSE,
-  eta = 1
+  eta = .2
 )
+
+
