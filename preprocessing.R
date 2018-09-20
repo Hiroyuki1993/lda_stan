@@ -2,7 +2,7 @@ library(tidyverse)
 library(tidytext)
 
 corpus = read_csv("./corpus_20news.txt", col_names = "words")
-corpus = corpus %>% sample_n(1000)
+corpus = corpus %>% sample_n(2000)
 corpus = corpus %>% mutate(doc = seq(1:nrow(corpus)))
 corpus.tidy = corpus %>% unnest_tokens(word, words)
 corpus.tidy = corpus.tidy %>% mutate(word = as.integer(word))

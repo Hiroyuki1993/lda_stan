@@ -28,7 +28,7 @@ fit.vb = vb(
   data = data,
   output_samples = 2000,
   adapt_engaged = FALSE,
-  eta = .2
+  eta = .1 # best eta
 )
 
 

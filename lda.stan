@@ -26,7 +26,7 @@ model {
       real gamma[K];
       for (k in 1:K)
         gamma[k] = log(theta[m,k]) + log(phi[k,W[n]]);
-      increment_log_prob(log_sum_exp(gamma));
+      target += log_sum_exp(gamma);
     }
   }
 }
